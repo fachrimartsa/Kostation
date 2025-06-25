@@ -1,4 +1,3 @@
-/* Reset & Base Styles */
 * {
     margin: 0;
     padding: 0;
@@ -7,15 +6,15 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #F7FBF4; /* Very Light Greenish White */
-    color: #333; /* Keep text dark for readability */
+    background-color: #F7FBF4;
+    color: #333; 
     line-height: 1.7;
     scroll-behavior: smooth;
 }
 
 h1, h2, h3, h4 {
     font-family: 'Montserrat', sans-serif;
-    color: #3A4C2E; /* Deep Forest Green for headings */
+    color: #3A4C2E; 
     margin-bottom: 20px;
     font-weight: 700;
 }
@@ -30,10 +29,9 @@ a {
 }
 
 .section-padding {
-    padding: 80px 5%; /* Consistent padding for all sections */
+    padding: 80px 5%; 
 }
 
-/* --- Navigation --- */
 nav {
     display: flex;
     justify-content: space-between;
@@ -65,7 +63,7 @@ nav.scrolled {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.8rem;
     font-weight: 700;
-    color: #4D6236; /* Medium Dark Olive Green for brand */
+    color: #4D6236; 
 }
 
 .nav-links {
@@ -94,7 +92,7 @@ nav.scrolled {
     display: block;
     margin-top: 5px;
     right: 0;
-    background: #8BA861; /* Primary Olive Green Accent */
+    background: #8BA861;
     transition: width 0.3s ease;
 }
 
@@ -168,7 +166,7 @@ nav.scrolled {
 }
 
 .hero-content h1 span {
-    color: #BDD99B; /* Lighter Olive Green for emphasis */
+    color: #BDD99B; 
     display: block;
 }
 
@@ -181,7 +179,7 @@ nav.scrolled {
 .cta-button {
     display: inline-flex;
     align-items: center;
-    background-color: #4D6236; /* Main Dark Olive Green */
+    background-color: #4D6236;
     color: white;
     padding: 14px 35px;
     border-radius: 50px;
@@ -197,13 +195,13 @@ nav.scrolled {
 }
 
 .cta-button:hover {
-    background-color: #3A4C2E; /* Even Darker Green on hover */
+    background-color: #3A4C2E; 
     transform: translateY(-3px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 }
 
 .secondary-button {
-    background-color: #7f8c8d; /* Keep grey for secondary action, or a muted green-grey */
+    background-color: #7f8c8d; 
     margin-left: 20px;
 }
 
@@ -218,7 +216,7 @@ h2 {
     margin-bottom: 60px;
     position: relative;
     padding-bottom: 10px;
-    color: #3A4C2E; /* Deep Forest Green */
+    color: #3A4C2E; 
 }
 
 h2::after {
@@ -229,11 +227,10 @@ h2::after {
     transform: translateX(-50%);
     width: 80px;
     height: 4px;
-    background-color: #8BA861; /* Primary Olive Green Accent */
+    background-color: #8BA861; 
     border-radius: 2px;
 }
 
-/* --- Kamar Section (was Layanan) --- */
 .kamar {
     background-color: #ffffff;
 }
@@ -247,17 +244,17 @@ h2::after {
 }
 
 .kamar-card {
-    background: #fdfdfd; /* Very light background, close to white */
-    padding: 25px; /* Slightly less padding for cards with images */
+    background: #fdfdfd; 
+    padding: 25px; 
     border-radius: 15px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: center;
-    border: 1px solid #eee; /* Subtle border */
+    border: 1px solid #eee;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    overflow: hidden; /* For image border-radius */
+    overflow: hidden; 
 }
 
 .kamar-card:hover {
@@ -267,15 +264,15 @@ h2::after {
 
 .kamar-card img {
     width: 100%;
-    height: 200px; /* Fixed height for consistency */
+    height: 200px; 
     object-fit: cover;
-    border-radius: 10px; /* Rounded corners for image */
+    border-radius: 10px; 
     margin-bottom: 20px;
 }
 
 .kamar-card h3 {
     font-size: 1.8rem;
-    color: #3A4C2E; /* Deep Forest Green */
+    color: #3A4C2E; 
     margin-bottom: 15px;
 }
 
@@ -287,7 +284,7 @@ h2::after {
 
 .kamar-card p span {
     font-weight: 700;
-    color: #4D6236; /* Main Dark Olive Green */
+    color: #4D6236; 
     font-size: 1.2em;
 }
 
@@ -305,15 +302,15 @@ h2::after {
 }
 
 .kamar-card ul li i {
-    color: #2ecc71; /* Keep green checkmark, it fits */
+    color: #2ecc71; 
     margin-right: 8px;
     font-size: 1rem;
 }
 
 .card-button {
     display: inline-block;
-    background-color: #8BA861; /* Primary Olive Green Accent for card button */
-    color: white; /* White text on olive green */
+    background-color: #8BA861;
+    color: white; 
     padding: 10px 25px;
     border-radius: 30px;
     font-weight: 600;
@@ -322,13 +319,12 @@ h2::after {
 }
 
 .card-button:hover {
-    background-color: #728F50; /* Darker olive green on hover */
+    background-color: #728F50; 
     transform: translateY(-2px);
 }
 
-/* --- Fasilitas Section (was Keunggulan) --- */
 .fasilitas {
-    background-color: #EAF0E2; /* Light Greenish Gray background */
+    background-color: #EAF0E2;
     text-align: center;
     position: relative;
 }
@@ -347,8 +343,8 @@ h2::after {
 }
 
 .fasilitas-item {
-    flex: 0 0 calc(33.333% - 20px); /* Show 3 items, adjust for gap */
-    margin-right: 20px; /* Gap between items */
+    flex: 0 0 calc(33.333% - 20px); 
+    margin-right: 20px; 
     background: #ffffff;
     padding: 30px;
     border-radius: 15px;
@@ -369,13 +365,13 @@ h2::after {
 
 .fasilitas-item i {
     font-size: 3rem;
-    color: #4D6236; /* Main Dark Olive Green */
+    color: #4D6236; 
     margin-bottom: 20px;
 }
 
 .fasilitas-item h3 {
     font-size: 1.5rem;
-    color: #3A4C2E; /* Deep Forest Green */
+    color: #3A4C2E; 
     margin-bottom: 10px;
 }
 
@@ -389,7 +385,7 @@ h2::after {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(77, 98, 54, 0.8); /* Dark olive green transparent */
+    background-color: rgba(77, 98, 54, 0.8); 
     color: white;
     border: none;
     padding: 15px;
@@ -405,7 +401,7 @@ h2::after {
 }
 
 .slider-arrow:hover {
-    background-color: #3A4C2E; /* Even Darker Green on hover */
+    background-color: #3A4C2E; 
     transform: translateY(-50%) scale(1.05);
 }
 
@@ -417,7 +413,6 @@ h2::after {
     right: 0px;
 }
 
-/* Slider Dots */
 .fasilitas-dots {
     text-align: center;
     margin-top: 30px;
@@ -435,12 +430,11 @@ h2::after {
 }
 
 .fasilitas-dot.active {
-    background-color: #8BA861; /* Primary Olive Green Accent */
+    background-color: #8BA861; 
     width: 25px;
     border-radius: 6px;
 }
 
-/* --- Tentang Kami Section --- */
 .tentang {
     background-color: #ffffff;
 }
@@ -523,7 +517,7 @@ h2::after {
 }
 
 .tentang-text p strong {
-    color: #8BA861; /* Primary Olive Green Accent */
+    color: #8BA861; 
 }
 
 .tentang-text ul {
@@ -539,7 +533,7 @@ h2::after {
 }
 
 .tentang-text ul li i {
-    color: #2ecc71; /* Keep green checkmark, it fits */
+    color: #2ecc71; 
     margin-right: 10px;
     font-size: 1.1rem;
 }
@@ -549,9 +543,8 @@ h2::after {
     color: #333;
 }
 
-/* --- Promo Section --- */
 .promo {
-    background-color: #F0F4EC; /* Slightly darker greenish-beige for promo */
+    background-color: #F0F4EC;
     text-align: center;
 }
 
@@ -589,7 +582,7 @@ h2::after {
 
 .promo-card h3 {
     font-size: 1.8rem;
-    color: #4D6236; /* Main Dark Olive Green */
+    color: #4D6236; 
     margin-bottom: 10px;
 }
 
@@ -601,8 +594,8 @@ h2::after {
 
 .promo-code {
     display: block;
-    background-color: #A2C17D; /* Lighter Secondary Olive Accent */
-    color: #3A4C2E; /* Deep Forest Green for text on promo code */
+    background-color: #A2C17D; 
+    color: #3A4C2E; 
     padding: 8px 15px;
     border-radius: 5px;
     font-weight: 700;
@@ -617,9 +610,8 @@ h2::after {
     100% { transform: scale(1); }
 }
 
-/* --- Testimoni Section --- */
 .testimoni {
-    background-color: #EAF0E2; /* Light Greenish Gray tint */
+    background-color: #EAF0E2; 
     text-align: center;
 }
 
@@ -655,8 +647,8 @@ h2::after {
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 20px;
-    border: 4px solid #8BA861; /* Primary Olive Green Accent for profile pic border */
-    box-shadow: 0 0 15px rgba(139, 168, 97, 0.4); /* Olive green shadow */
+    border: 4px solid #8BA861; 
+    box-shadow: 0 0 15px rgba(139, 168, 97, 0.4); 
 }
 
 .slide p {
@@ -670,7 +662,7 @@ h2::after {
 
 .slide h4 {
     font-size: 1.2rem;
-    color: #4D6236; /* Main Dark Olive Green */
+    color: #4D6236;
     font-weight: 600;
 }
 
@@ -691,12 +683,11 @@ h2::after {
 }
 
 .dot.active {
-    background-color: #4D6236; /* Main Dark Olive Green for active dot */
+    background-color: #4D6236; 
     width: 25px;
     border-radius: 6px;
 }
 
-/* --- FAQ Section --- */
 .faq {
     background-color: #ffffff;
 }
@@ -717,8 +708,8 @@ h2::after {
 
 .faq-question {
     width: 100%;
-    background-color: #EAF0E2; /* Light Greenish Gray tint */
-    color: #3A4C2E; /* Deep Forest Green */
+    background-color: #EAF0E2; 
+    color: #3A4C2E;
     padding: 20px 25px;
     border: none;
     text-align: left;
@@ -732,17 +723,17 @@ h2::after {
 }
 
 .faq-question::after {
-    content: '\25BC'; /* Down arrow */
+    content: '\25BC'; 
     font-size: 1rem;
     transition: transform 0.3s ease;
 }
 
 .faq-question.active::after {
-    transform: rotate(-180deg); /* Up arrow */
+    transform: rotate(-180deg); 
 }
 
 .faq-question:hover {
-    background-color: #D9E0D2; /* Slightly darker greenish-gray on hover */
+    background-color: #D9E0D2; 
 }
 
 .faq-answer {
@@ -760,9 +751,8 @@ h2::after {
     font-size: 1rem;
 }
 
-/* --- Kontak Section --- */
 .kontak {
-    background-color: #EAF0E2; /* Light Greenish Gray */
+    background-color: #EAF0E2; 
 }
 
 .kontak-container {
@@ -785,7 +775,7 @@ h2::after {
 
 .kontak-info h3 {
     font-size: 1.5rem;
-    color: #4D6236; /* Main Dark Olive Green */
+    color: #4D6236; 
     margin-bottom: 15px;
     display: flex;
     align-items: center;
@@ -794,23 +784,23 @@ h2::after {
 .kontak-info h3 i {
     margin-right: 12px;
     font-size: 1.8rem;
-    color: #3A4C2E; /* Deep Forest Green */
+    color: #3A4C2E; 
 }
 
 .kontak-info p {
     font-size: 1.05rem;
     color: #666;
     margin-bottom: 10px;
-    word-break: break-word; /* For long URLs/numbers */
+    word-break: break-word; 
 }
 
 .kontak-info p a {
-    color: #4D6236; /* Main Dark Olive Green */
+    color: #4D6236; 
     transition: color 0.3s ease;
 }
 
 .kontak-info p a:hover {
-    color: #3A4C2E; /* Deep Forest Green */
+    color: #3A4C2E; 
     text-decoration: underline;
 }
 
@@ -820,7 +810,7 @@ h2::after {
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    height: 450px; /* Fixed height for consistency */
+    height: 450px;
 }
 
 .kontak-map iframe {
@@ -829,9 +819,8 @@ h2::after {
     border: none;
 }
 
-/* --- Footer --- */
 footer {
-    background-color: #3A4C2E; /* Deep Forest Green */
+    background-color: #3A4C2E; 
     color: white;
     text-align: center;
     padding: 30px;
@@ -842,17 +831,15 @@ footer p {
     margin: 0;
 }
 
-/* --- Horizontal Rule --- */
 hr {
     border: none;
     border-top: 1px solid #e0e0e0;
-    margin: 0 5%; /* Matches section padding */
+    margin: 0 5%; 
 }
 
-/* Responsive adjustments for fasilitas slider (same as keunggulan previously) */
 @media (max-width: 992px) {
     .fasilitas-item {
-        flex: 0 0 calc(50% - 15px); /* Show 2 items on medium screens */
+        flex: 0 0 calc(50% - 15px); 
         margin-right: 15px;
     }
 }
@@ -861,7 +848,7 @@ hr {
     .nav-links {
         position: absolute;
         right: 0;
-        top: 70px; /* Adjusted based on nav height */
+        top: 70px;
         background-color: #ffffff;
         display: flex;
         flex-direction: column;
@@ -878,7 +865,7 @@ hr {
     }
 
     .nav-links li {
-        opacity: 1; /* Hide by default for slide-in effect */
+        opacity: 1; 
         margin: 20px 0;
         text-align: center;
     }

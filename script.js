@@ -5,10 +5,8 @@ const navSlide = () => {
     const navLinks = document.querySelectorAll('.nav-links li');
 
     burger.addEventListener('click', () => {
-        // Toggle Nav
         nav.classList.toggle('nav-active');
 
-        // Animate Links
         navLinks.forEach((link, index) => {
             if (link.style.animation) {
                 link.style.animation = '';
@@ -17,38 +15,34 @@ const navSlide = () => {
             }
         });
 
-        // Burger Animation
         burger.classList.toggle('toggle');
     });
 
-    // Close nav when a link is clicked (for mobile)
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
             nav.classList.remove('nav-active');
             burger.classList.remove('toggle');
             navLinks.forEach(item => {
-                item.style.animation = ''; // Reset animation on close
+                item.style.animation = ''; 
             });
         });
     });
 }
 
-// Smooth scroll for navigation
 document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
         const targetId = this.getAttribute('href');
         const targetElement = document.querySelector(targetId);
-        const navHeight = document.querySelector('nav').offsetHeight; // Get nav height
+        const navHeight = document.querySelector('nav').offsetHeight; 
 
         window.scrollTo({
-            top: targetElement.offsetTop - navHeight, // Adjust for fixed nav
+            top: targetElement.offsetTop - navHeight, 
             behavior: 'smooth'
         });
     });
 });
 
-// Testimoni Slider with Dots (unchanged, just ensure elements are present in HTML)
 let slideIndex = 0;
 const slides = document.querySelectorAll('.testimoni-slider .slide');
 const dots = document.querySelectorAll('.slider-dots .dot');
@@ -69,15 +63,13 @@ function currentSlide(n) {
     showSlides(slideIndex);
 }
 
-// Automatic slide change
 let slideInterval = setInterval(() => {
     slideIndex++;
     showSlides(slideIndex);
-}, 5000); // Change slide every 5 seconds
+}, 5000); 
 
-// Pause on hover (optional)
 const sliderContainer = document.querySelector('.testimoni-slider');
-if (sliderContainer) { // Check if element exists before adding listener
+if (sliderContainer) { 
     sliderContainer.addEventListener('mouseenter', () => {
         clearInterval(slideInterval);
     });
@@ -90,7 +82,6 @@ if (sliderContainer) { // Check if element exists before adding listener
 }
 
 
-// FAQ Accordion
 const faqQuestions = document.querySelectorAll('.faq-question');
 
 faqQuestions.forEach(question => {
@@ -98,7 +89,6 @@ faqQuestions.forEach(question => {
         const answer = question.nextElementSibling;
         const isActive = question.classList.contains('active');
 
-        // Close all other open answers
         faqQuestions.forEach(q => {
             if (q !== question && q.classList.contains('active')) {
                 q.classList.remove('active');
@@ -107,7 +97,6 @@ faqQuestions.forEach(question => {
             }
         });
 
-        // Toggle current answer
         if (isActive) {
             question.classList.remove('active');
             answer.style.maxHeight = null;
@@ -121,20 +110,18 @@ faqQuestions.forEach(question => {
 });
 
 
-// Navbar shrink on scroll
 window.addEventListener('scroll', () => {
     const nav = document.querySelector('nav');
-    if (window.scrollY > 50) { // Adjust value as needed
+    if (window.scrollY > 50) {
         nav.classList.add('scrolled');
     } else {
         nav.classList.remove('scrolled');
     }
 });
 
-// Animate elements on scroll (FadeIn & SlideUp for sections)
 const animateOnScroll = () => {
     const sections = document.querySelectorAll('.section-padding');
-    const triggerBottom = window.innerHeight * 0.8; // Trigger when 80% of section is visible
+    const triggerBottom = window.innerHeight * 0.8; 
 
     sections.forEach(section => {
         const sectionTop = section.getBoundingClientRect().top;
@@ -145,17 +132,14 @@ const animateOnScroll = () => {
     });
 };
 
-// Initial check and add event listener
 document.addEventListener('DOMContentLoaded', () => {
-    animateOnScroll(); // Check on load
+    animateOnScroll(); 
     window.addEventListener('scroll', animateOnScroll);
 });
 
-// Set current year in footer
 document.getElementById('current-year').textContent = new Date().getFullYear();
 
 
-// --- Fasilitas Slider (was Keunggulan Slider, adjusted for Kostation) ---
 const fasilitasSlider = document.querySelector('.fasilitas-slider');
 const fasilitasItems = document.querySelectorAll('.fasilitas-item');
 const fasilitasPrevArrow = document.querySelector('.fasilitas .prev-arrow');
@@ -163,11 +147,11 @@ const fasilitasNextArrow = document.querySelector('.fasilitas .next-arrow');
 const fasilitasDotsContainer = document.querySelector('.fasilitas-dots');
 
 let fasilitasIndex = 0;
-let fasilitasItemsPerSlide = 3; // Default for desktop
+let fasilitasItemsPerSlide = 3; 
 let fasilitasItemWidth;
 
 const updateFasilitasSliderMetrics = () => {
-    if (!fasilitasItems || fasilitasItems.length === 0) return; // Exit if no items
+    if (!fasilitasItems || fasilitasItems.length === 0) return;
 
     if (window.innerWidth <= 768) {
         fasilitasItemsPerSlide = 1;
@@ -177,7 +161,6 @@ const updateFasilitasSliderMetrics = () => {
         fasilitasItemsPerSlide = 3;
     }
     
-    // Calculate actual item width including margin for accurate transform
     const itemStyle = getComputedStyle(fasilitasItems[0]);
     const itemClientWidth = fasilitasItems[0].clientWidth;
     const marginLeft = parseFloat(itemStyle.marginLeft);
@@ -185,7 +168,6 @@ const updateFasilitasSliderMetrics = () => {
     fasilitasItemWidth = itemClientWidth + marginLeft + marginRight;
 
 
-    // Generate dots
     fasilitasDotsContainer.innerHTML = '';
     const totalPages = Math.ceil(fasilitasItems.length / fasilitasItemsPerSlide);
     for (let i = 0; i < totalPages; i++) {
@@ -203,7 +185,7 @@ const updateFasilitasSliderMetrics = () => {
 };
 
 const updateFasilitasSlider = () => {
-    if (!fasilitasItems || fasilitasItems.length === 0) return; // Exit if no items
+    if (!fasilitasItems || fasilitasItems.length === 0) return;
 
     const maxIndex = fasilitasItems.length - fasilitasItemsPerSlide;
     if (fasilitasIndex > maxIndex) {
@@ -220,7 +202,6 @@ const updateFasilitasSlider = () => {
 
     fasilitasSlider.style.transform = `translateX(${offset}px)`;
 
-    // Update dots
     const currentActiveDot = Math.floor(fasilitasIndex / fasilitasItemsPerSlide);
     Array.from(fasilitasDotsContainer.children).forEach((dot, index) => {
         if (index === currentActiveDot) {
@@ -231,7 +212,7 @@ const updateFasilitasSlider = () => {
     });
 };
 
-if (fasilitasPrevArrow && fasilitasNextArrow) { // Check if arrows exist
+if (fasilitasPrevArrow && fasilitasNextArrow) { 
     fasilitasPrevArrow.addEventListener('click', () => {
         fasilitasIndex -= fasilitasItemsPerSlide;
         updateFasilitasSlider();
@@ -244,19 +225,16 @@ if (fasilitasPrevArrow && fasilitasNextArrow) { // Check if arrows exist
 }
 
 
-// Update slider on resize
 window.addEventListener('resize', () => {
     updateFasilitasSliderMetrics();
     updateFasilitasSlider();
 });
 
-// Initial setup for Fasilitas Slider
 document.addEventListener('DOMContentLoaded', () => {
     updateFasilitasSliderMetrics();
     updateFasilitasSlider();
 });
 
-// --- Tentang Section Carousel (1 Gambar Per Slide) ---
 const slideContainer = document.getElementById("slideContainer");
 const slideImages = slideContainer ? slideContainer.querySelectorAll("img") : [];
 let tentangSlideIndex = 0;
@@ -274,12 +252,8 @@ function changeSlide(direction) {
 }
 
 window.addEventListener('resize', () => {
-    // Update posisi saat resize untuk responsif
     const slideWidth = slideImages[0]?.clientWidth || 0;
     slideContainer.style.transform = `translateX(-${slideWidth * tentangSlideIndex}px)`;
 });
 
-// --- End Fasilitas Slider ---
-
-// Initialize all functions
 navSlide();
