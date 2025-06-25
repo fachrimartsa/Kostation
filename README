@@ -1,0 +1,71 @@
+# KoStation - Penginapan Nyaman dan Strategis di Cikarang
+
+![Hero Image](images/hero.jpeg)
+
+KoStation adalah website profil untuk sebuah penginapan/kost modern yang menawarkan kenyamanan dan lokasi strategis di area Cikarang. Website ini dirancang untuk memberikan informasi lengkap mengenai jenis kamar, fasilitas, promo terbaru, testimoni pelanggan, dan kontak, dengan tampilan yang responsif dan mudah digunakan.
+
+---
+
+## **Daftar Isi**
+
+- [Fitur Utama](#fitur-utama)
+- [Teknologi yang Digunakan](#teknologi-yang-digunakan)
+- [Instalasi dan Penggunaan](#instalasi-dan-penggunaan)
+- [Struktur Proyek](#struktur-proyek)
+- [Kontak](#kontak)
+
+---
+
+## **Fitur Utama**
+
+-   **Hero Section Interaktif:** Tampilan pembuka yang menarik dengan gambar latar belakang penuh dan teks yang berpusat.
+-   **Navigation Bar Responsif:** Menu navigasi yang adaptif untuk desktop dan mobile (burger menu).
+-   **Bagian Kamar (Layanan):** Menampilkan berbagai jenis kamar yang tersedia beserta harga dan fasilitasnya.
+-   **Bagian Fasilitas (Keunggulan):** Menyoroti fasilitas-fasilitas utama yang ditawarkan dengan tampilan slider.
+-   **Tentang Kami:** Memberikan gambaran singkat tentang KoStation dan nilai-nilai yang diusung.
+-   **Promo Menarik:** Menampilkan informasi promo atau penawaran khusus dengan kode promo yang menarik perhatian.
+-   **Testimoni Pelanggan:** Bagian slider untuk menampilkan ulasan positif dari penghuni sebelumnya.
+-   **FAQ (Frequently Asked Questions):** Bagian tanya jawab untuk menjawab pertanyaan umum, dengan efek accordion.
+-   **Kontak & Lokasi:** Informasi kontak lengkap dan peta Google Maps interaktif untuk memudahkan pencarian lokasi.
+-   **Desain Responsif:** Tampilan website yang dioptimalkan untuk berbagai ukuran layar (desktop, tablet, mobile).
+
+---
+
+## **Teknologi yang Digunakan**
+
+-   **HTML5:** Untuk struktur dasar konten website.
+-   **CSS3:** Untuk styling dan layout website, termasuk responsivitas dan animasi.
+-   **JavaScript (ES6+):** Untuk fungsionalitas interaktif seperti navigasi mobile (burger menu), slider fasilitas, slider testimoni, dan accordion FAQ.
+-   **Font Awesome:** Untuk ikon-ikon yang digunakan di seluruh website.
+-   **Google Fonts:** Untuk kustomisasi font (`Poppins` dan `Montserrat`).
+
+---
+
+## **Instalasi dan Penggunaan**
+
+Untuk menjalankan proyek ini secara lokal, ikuti langkah-langkah berikut:
+
+1.  **Clone repositori ini (jika ada):**
+    ```bash
+    git clone [URL_REPOSITORI_ANDA]
+    cd KoStation-Website
+    ```
+    *Jika belum ada repositori, cukup unduh file-file proyek ini.*
+
+2.  **Buka file `index.html`:**
+    Cukup buka file `index.html` menggunakan browser pilihan Anda (misalnya Chrome, Firefox, Edge).
+
+    ```bash
+    # Contoh di Linux/macOS
+    open index.html
+
+    # Contoh di Windows
+    start index.html
+    ```
+    Website akan langsung terbuka di browser Anda.
+
+---
+
+## **Struktur Proyek**
+
+Berikut adalah struktur direktori utama proyek ini:

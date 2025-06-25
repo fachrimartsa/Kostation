@@ -1,0 +1,971 @@
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #F7FBF4; /* Very Light Greenish White */
+    color: #333; /* Keep text dark for readability */
+    line-height: 1.7;
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Montserrat', sans-serif;
+    color: #3A4C2E; /* Deep Forest Green for headings */
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.section-padding {
+    padding: 80px 5%; /* Consistent padding for all sections */
+}
+
+/* --- Navigation --- */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background-color: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+nav.scrolled {
+    padding: 10px 5%;
+    background-color: rgba(255, 255, 255, 0.95);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.logo span {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #4D6236; /* Medium Dark Olive Green for brand */
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 35px;
+}
+
+.nav-links li a {
+    color: #555;
+    font-weight: 500;
+    font-size: 1rem;
+    position: relative;
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: 5px;
+    right: 0;
+    background: #8BA861; /* Primary Olive Green Accent */
+    transition: width 0.3s ease;
+}
+
+.nav-links li a:hover::after {
+    width: 100%;
+    left: 0;
+    background: #8BA861;
+}
+
+.nav-links li a:hover {
+    color: #8BA861;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+.hero {
+    background: url('images/hero.jpeg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5%;
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at top left, rgba(139, 168, 97, 0.3) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.hero-content {
+    max-width: 880px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInSlideUp 1s forwards 0.5s;
+}
+
+@keyframes fadeInSlideUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-content h1 {
+    font-size: 3.8rem;
+    margin-bottom: 25px;
+    line-height: 1.2;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-content h1 span {
+    color: #BDD99B; /* Lighter Olive Green for emphasis */
+    display: block;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: white;
+}
+
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    background-color: #4D6236; /* Main Dark Olive Green */
+    color: white;
+    padding: 14px 35px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button i {
+    margin-left: 10px;
+    font-size: 1.2rem;
+}
+
+.cta-button:hover {
+    background-color: #3A4C2E; /* Even Darker Green on hover */
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.secondary-button {
+    background-color: #7f8c8d; /* Keep grey for secondary action, or a muted green-grey */
+    margin-left: 20px;
+}
+
+.secondary-button:hover {
+    background-color: #6a7475;
+}
+
+/* --- Section Headings --- */
+h2 {
+    font-size: 2.8rem;
+    text-align: center;
+    margin-bottom: 60px;
+    position: relative;
+    padding-bottom: 10px;
+    color: #3A4C2E; /* Deep Forest Green */
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: #8BA861; /* Primary Olive Green Accent */
+    border-radius: 2px;
+}
+
+/* --- Kamar Section (was Layanan) --- */
+.kamar {
+    background-color: #ffffff;
+}
+
+.kamar-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.kamar-card {
+    background: #fdfdfd; /* Very light background, close to white */
+    padding: 25px; /* Slightly less padding for cards with images */
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    border: 1px solid #eee; /* Subtle border */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden; /* For image border-radius */
+}
+
+.kamar-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.kamar-card img {
+    width: 100%;
+    height: 200px; /* Fixed height for consistency */
+    object-fit: cover;
+    border-radius: 10px; /* Rounded corners for image */
+    margin-bottom: 20px;
+}
+
+.kamar-card h3 {
+    font-size: 1.8rem;
+    color: #3A4C2E; /* Deep Forest Green */
+    margin-bottom: 15px;
+}
+
+.kamar-card p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.kamar-card p span {
+    font-weight: 700;
+    color: #4D6236; /* Main Dark Olive Green */
+    font-size: 1.2em;
+}
+
+.kamar-card ul {
+    list-style: none;
+    text-align: left;
+    margin: 20px 0;
+    flex-grow: 1;
+}
+
+.kamar-card ul li {
+    margin-bottom: 10px;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+.kamar-card ul li i {
+    color: #2ecc71; /* Keep green checkmark, it fits */
+    margin-right: 8px;
+    font-size: 1rem;
+}
+
+.card-button {
+    display: inline-block;
+    background-color: #8BA861; /* Primary Olive Green Accent for card button */
+    color: white; /* White text on olive green */
+    padding: 10px 25px;
+    border-radius: 30px;
+    font-weight: 600;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.card-button:hover {
+    background-color: #728F50; /* Darker olive green on hover */
+    transform: translateY(-2px);
+}
+
+/* --- Fasilitas Section (was Keunggulan) --- */
+.fasilitas {
+    background-color: #EAF0E2; /* Light Greenish Gray background */
+    text-align: center;
+    position: relative;
+}
+
+.fasilitas-slider-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    padding: 0 40px;
+}
+
+.fasilitas-slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.fasilitas-item {
+    flex: 0 0 calc(33.333% - 20px); /* Show 3 items, adjust for gap */
+    margin-right: 20px; /* Gap between items */
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.07);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    min-width: 280px;
+}
+
+.fasilitas-item:last-child {
+    margin-right: 0;
+}
+
+.fasilitas-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.12);
+}
+
+.fasilitas-item i {
+    font-size: 3rem;
+    color: #4D6236; /* Main Dark Olive Green */
+    margin-bottom: 20px;
+}
+
+.fasilitas-item h3 {
+    font-size: 1.5rem;
+    color: #3A4C2E; /* Deep Forest Green */
+    margin-bottom: 10px;
+}
+
+.fasilitas-item p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Slider Arrows */
+.slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(77, 98, 54, 0.8); /* Dark olive green transparent */
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.slider-arrow:hover {
+    background-color: #3A4C2E; /* Even Darker Green on hover */
+    transform: translateY(-50%) scale(1.05);
+}
+
+.prev-arrow {
+    left: 0px;
+}
+
+.next-arrow {
+    right: 0px;
+}
+
+/* Slider Dots */
+.fasilitas-dots {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.fasilitas-dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease, width 0.3s ease, border-radius 0.3s ease;
+    cursor: pointer;
+}
+
+.fasilitas-dot.active {
+    background-color: #8BA861; /* Primary Olive Green Accent */
+    width: 25px;
+    border-radius: 6px;
+}
+
+/* --- Tentang Kami Section --- */
+.tentang {
+    background-color: #ffffff;
+}
+
+.tentang-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tentang-image-wrapper {
+    position: relative;
+    flex: 1;
+    overflow: hidden;
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.single-image-slide {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.single-image-slide img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    flex-shrink: 0;
+    border-radius: 12px;
+}
+
+.scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    padding: 0.5rem 0.9rem;
+    cursor: pointer;
+    z-index: 2;
+    border-radius: 50%;
+}
+
+.scroll-btn.left {
+    left: 10px;
+}
+
+.scroll-btn.right {
+    right: 10px;
+}
+
+.scroll-btn:hover {
+    background: rgba(0,0,0,0.7);
+}
+
+@media (max-width: 600px) {
+  .single-image-slide img {
+    height: 250px;
+  }
+}
+
+@keyframes fadeInZoom {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.tentang-text {
+    flex: 2;
+    min-width: 300px;
+}
+
+.tentang-text p strong {
+    color: #8BA861; /* Primary Olive Green Accent */
+}
+
+.tentang-text ul {
+    list-style: none;
+    margin-top: 25px;
+    padding-left: 0;
+}
+
+.tentang-text ul li {
+    margin-bottom: 12px;
+    font-size: 1rem;
+    color: #555;
+}
+
+.tentang-text ul li i {
+    color: #2ecc71; /* Keep green checkmark, it fits */
+    margin-right: 10px;
+    font-size: 1.1rem;
+}
+
+.tentang-text ul li span {
+    font-weight: 600;
+    color: #333;
+}
+
+/* --- Promo Section --- */
+.promo {
+    background-color: #F0F4EC; /* Slightly darker greenish-beige for promo */
+    text-align: center;
+}
+
+.promo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.promo-card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+}
+
+.promo-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.promo-card img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.promo-card h3 {
+    font-size: 1.8rem;
+    color: #4D6236; /* Main Dark Olive Green */
+    margin-bottom: 10px;
+}
+
+.promo-card p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.promo-code {
+    display: block;
+    background-color: #A2C17D; /* Lighter Secondary Olive Accent */
+    color: #3A4C2E; /* Deep Forest Green for text on promo code */
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* --- Testimoni Section --- */
+.testimoni {
+    background-color: #EAF0E2; /* Light Greenish Gray tint */
+    text-align: center;
+}
+
+.testimoni-slider {
+    position: relative;
+    max-width: 900px;
+    margin: 50px auto;
+    overflow: hidden;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.slide {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+    padding: 20px;
+}
+
+.slide.active {
+    display: flex;
+    opacity: 1;
+}
+
+.slide img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 4px solid #8BA861; /* Primary Olive Green Accent for profile pic border */
+    box-shadow: 0 0 15px rgba(139, 168, 97, 0.4); /* Olive green shadow */
+}
+
+.slide p {
+    font-size: 1.15rem;
+    font-style: italic;
+    color: #555;
+    margin-bottom: 15px;
+    max-width: 700px;
+    line-height: 1.6;
+}
+
+.slide h4 {
+    font-size: 1.2rem;
+    color: #4D6236; /* Main Dark Olive Green */
+    font-weight: 600;
+}
+
+.slider-dots {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #4D6236; /* Main Dark Olive Green for active dot */
+    width: 25px;
+    border-radius: 6px;
+}
+
+/* --- FAQ Section --- */
+.faq {
+    background-color: #ffffff;
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background: #fdfdfd;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.faq-question {
+    width: 100%;
+    background-color: #EAF0E2; /* Light Greenish Gray tint */
+    color: #3A4C2E; /* Deep Forest Green */
+    padding: 20px 25px;
+    border: none;
+    text-align: left;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.faq-question::after {
+    content: '\25BC'; /* Down arrow */
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.faq-question.active::after {
+    transform: rotate(-180deg); /* Up arrow */
+}
+
+.faq-question:hover {
+    background-color: #D9E0D2; /* Slightly darker greenish-gray on hover */
+}
+
+.faq-answer {
+    padding: 0 25px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+    background-color: #ffffff;
+}
+
+.faq-answer p {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: #666;
+    font-size: 1rem;
+}
+
+/* --- Kontak Section --- */
+.kontak {
+    background-color: #EAF0E2; /* Light Greenish Gray */
+}
+
+.kontak-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: flex-start;
+}
+
+.kontak-info {
+    flex: 1;
+    min-width: 300px;
+    background: #ffffff;
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.kontak-info h3 {
+    font-size: 1.5rem;
+    color: #4D6236; /* Main Dark Olive Green */
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.kontak-info h3 i {
+    margin-right: 12px;
+    font-size: 1.8rem;
+    color: #3A4C2E; /* Deep Forest Green */
+}
+
+.kontak-info p {
+    font-size: 1.05rem;
+    color: #666;
+    margin-bottom: 10px;
+    word-break: break-word; /* For long URLs/numbers */
+}
+
+.kontak-info p a {
+    color: #4D6236; /* Main Dark Olive Green */
+    transition: color 0.3s ease;
+}
+
+.kontak-info p a:hover {
+    color: #3A4C2E; /* Deep Forest Green */
+    text-decoration: underline;
+}
+
+.kontak-map {
+    flex: 2;
+    min-width: 350px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    height: 450px; /* Fixed height for consistency */
+}
+
+.kontak-map iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: #3A4C2E; /* Deep Forest Green */
+    color: white;
+    text-align: center;
+    padding: 30px;
+    font-size: 0.95rem;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* --- Horizontal Rule --- */
+hr {
+    border: none;
+    border-top: 1px solid #e0e0e0;
+    margin: 0 5%; /* Matches section padding */
+}
+
+/* Responsive adjustments for fasilitas slider (same as keunggulan previously) */
+@media (max-width: 992px) {
+    .fasilitas-item {
+        flex: 0 0 calc(50% - 15px); /* Show 2 items on medium screens */
+        margin-right: 15px;
+    }
+}
+
+@media (max-width: 768px) {    
+    .nav-links {
+        position: absolute;
+        right: 0;
+        top: 70px; /* Adjusted based on nav height */
+        background-color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        height: calc(100vh - 70px);
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+        padding: 30px 0;
+        box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.nav-active {
+        transform: translateX(0%);
+    }
+
+    .nav-links li {
+        opacity: 1; /* Hide by default for slide-in effect */
+        margin: 20px 0;
+        text-align: center;
+    }
+    
+    .nav-links li a {
+        font-size: 1.2rem;
+        color: #333;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .burger.toggle .line1 {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    .burger.toggle .line2 {
+        opacity: 0;
+    }
+    .burger.toggle .line3 {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    .hero {
+        text-align: center;
+        justify-content: center;
+    }
+    .hero-content {
+        max-width: 90%;
+        text-align: center;
+    }
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+        margin-bottom: 40px;
+    }
+
+    .kamar-grid, .promo-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tentang-content {
+        flex-direction: column;
+    }
+
+    .tentang-image-container {
+        width: 100%;
+    }
+
+    .testimoni-slider {
+        margin: 30px auto;
+        padding: 15px;
+    }
+    .slide p {
+        font-size: 1rem;
+    }
+    .slide h4 {
+        font-size: 1.1rem;
+    }
+
+    .faq-question {
+        padding: 15px 20px;
+        font-size: 1rem;
+    }
+    .faq-answer {
+        padding: 0 20px;
+    }
+
+    .fasilitas-slider-container {
+        padding: 0 20px;
+    }
+    .slider-arrow {
+        padding: 10px;
+        font-size: 1rem;
+    }
+    .fasilitas-item {
+        flex: 0 0 calc(100% - 0px);
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    .fasilitas-slider {
+        flex-direction: column;
+    }
+}
